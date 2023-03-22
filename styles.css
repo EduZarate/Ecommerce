@@ -134,13 +134,15 @@
   border: 1px solid var(--5);
   background-color: transparent;
   width: 15.5%;
-  min-width: 80px;
+  min-width: 105px;
   color: var(--5);
   font-size: 1rem;
   transition: all 400ms;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  line-height: 17px;
 }
 
 .menu__button:hover {
@@ -456,12 +458,46 @@
   border-bottom: 3px solid var(--2);
   font-weight: 400;
   font-size: 1rem;
+  outline: none;
 }
 
 .login__form__button {
   background-color: var(--5);
   border: none;
   color: var(--1);
+}
+
+/* UPLOAD */
+
+.upload {
+  padding-top: 3rem;
+  background-color: var(--3);
+  height: 45rem;
+}
+
+.file {
+  width: 50%;
+}
+
+.file input {
+  display: none;
+}
+
+.file label {
+  color: var(--3);
+  display: block;
+  height: 3rem;
+  width: 100%;
+  background-color: var(--2);
+  border: 1px solid var(--5);
+  cursor: pointer;
+}
+.upload__form__file > button {
+  background-color: #2a7ae4;
+}
+
+.upload__form__textarea {
+  height: 5.12rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -588,123 +624,123 @@
   .login__form__input {
     height: 2.5rem;
   }
+}
 
-  @media screen and (max-width: 500px) {
-    .menu__logo {
-      width: 50%;
-    }
-
-    .menu__search {
-      display: none;
-    }
-
-    .menu__input__lupa__mobile {
-      display: initial;
-      display: flex;
-    }
-
-    .menu__header {
-      width: min-content;
-    }
-
-    .menu__button {
-      width: 30%;
-    }
+@media screen and (max-width: 500px) {
+  .menu__logo {
+    width: 50%;
   }
 
-  @media screen and (max-width: 360px) {
-    /* HERO */
+  .menu__search {
+    display: none;
+  }
 
-    .hero {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
+  .menu__input__lupa__mobile {
+    display: initial;
+    display: flex;
+  }
 
-    .hero__title {
-      font-weight: 700;
-      font-size: 2rem;
-    }
+  .menu__header {
+    width: min-content;
+  }
 
-    .hero__subtitle {
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
+  .menu__button {
+    width: 30%;
+  }
+}
 
-    /* PRODUCTOS */
+@media screen and (max-width: 360px) {
+  /* HERO */
 
-    .products__interior {
-      padding: 0.5rem 0;
-    }
+  .hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-    .products__ {
-      flex-wrap: wrap;
-      gap: 2%;
-      width: 90%;
-      margin: 0 auto;
-    }
+  .hero__title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
 
-    .products__bar {
-      max-width: 48%;
-    }
+  .hero__subtitle {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
 
-    .products__bar__card img {
-      max-width: 95%;
-      height: auto;
-    }
+  /* PRODUCTOS */
 
-    /* CONTACTO */
+  .products__interior {
+    padding: 0.5rem 0;
+  }
 
-    .contacto {
-      height: fit-content;
-      padding: 1.5rem;
-    }
+  .products__ {
+    flex-wrap: wrap;
+    gap: 2%;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    .contacto__interior {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+  .products__bar {
+    max-width: 48%;
+  }
 
-    .contacto__interior {
-      height: fit-content;
-      gap: 2rem;
-    }
+  .products__bar__card img {
+    max-width: 95%;
+    height: auto;
+  }
 
-    .contacto__menu {
-      width: auto;
-      align-items: center;
-      text-align: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+  /* CONTACTO */
 
-    .contacto__list {
-      gap: 0.2rem;
-    }
+  .contacto {
+    height: fit-content;
+    padding: 1.5rem;
+  }
 
-    .contacto__formulario {
-      width: 100%;
-    }
+  .contacto__interior {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .contacto__container__medio {
-      padding: 0;
-    }
+  .contacto__interior {
+    height: fit-content;
+    gap: 2rem;
+  }
 
-    /* FOOTER */
+  .contacto__menu {
+    width: auto;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 
-    .footer__container__interior__img {
-      height: 25%;
-    }
+  .contacto__list {
+    gap: 0.2rem;
+  }
 
-    .footer__other__devices {
-      font-size: 0.8rem;
-    }
+  .contacto__formulario {
+    width: 100%;
+  }
 
-    /* LOGIN */
+  .contacto__container__medio {
+    padding: 0;
+  }
 
-    .login__form {
-      width: 80%;
-    }
+  /* FOOTER */
+
+  .footer__container__interior__img {
+    height: 25%;
+  }
+
+  .footer__other__devices {
+    font-size: 0.8rem;
+  }
+
+  /* LOGIN */
+
+  .login__form {
+    width: 80%;
   }
 }
