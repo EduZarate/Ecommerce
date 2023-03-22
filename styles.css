@@ -64,8 +64,9 @@
 /* Estilos */
 
 .menu {
-  height: 5rem;
+  height: 4.5rem;
   background-color: var(--4);
+  position: fixed;
 }
 
 .menu__int {
@@ -137,6 +138,9 @@
   color: var(--5);
   font-size: 1rem;
   transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__button:hover {
@@ -150,9 +154,9 @@
 .hero {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, #252422 100%),
     url(/assets/img/troy.jpg);
-  height: 27rem;
+  height: 30rem;
   background-repeat: no-repeat;
-  background-position: -unset;
+  background-position: unset;
   background-size: cover;
 }
 
@@ -271,6 +275,11 @@
   width: 20%;
 }
 
+.contacto__logo {
+  display: flex;
+  align-items: center;
+}
+
 .contacto__interior {
   display: flex;
   justify-content: space-between;
@@ -283,30 +292,35 @@
   width: 35%;
   justify-content: space-between;
   height: 12rem;
+  gap: 1rem;
 }
 
 .contacto__interior {
   display: flex;
   align-items: center;
   height: 15%;
+  /* min-width: ; */
 }
 
 .contacto__menu__logo {
   display: flex;
   align-items: flex-start;
   height: 25%;
+  max-width: 170px;
 }
 
 .contacto__list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--2);
+  min-width: 150px;
 }
 
 .contacto__formulario {
   display: flex;
   flex-direction: column;
-  width: 35rem;
+  width: 50%;
   gap: 0.5rem;
 }
 
@@ -404,6 +418,52 @@
   font-size: 1.5rem;
 }
 
+.footer__other__devices {
+  display: none;
+}
+
+/* LOGIN */
+
+.login {
+  background-color: var(--3);
+  height: 31rem;
+}
+
+.login__interior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-width: 1/3vw; */
+  gap: 1.55rem;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.55rem;
+  width: 40%;
+  min-width: 250px;
+}
+
+.login__interior__title {
+  color: var(--2);
+}
+
+.login__form__input {
+  height: 3.5rem;
+  border-radius: 3px;
+  padding-left: 1rem;
+  border-bottom: 3px solid var(--2);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.login__form__button {
+  background-color: var(--5);
+  border: none;
+  color: var(--1);
+}
+
 @media screen and (max-width: 768px) {
   /* MENU */
 
@@ -497,106 +557,154 @@
 
   .contacto__formulario {
     justify-content: space-between;
+    width: 60%;
   }
 
   .contacto__formulario__button {
     height: 2.5rem;
     width: 8.3rem;
   }
-}
 
-@media screen and (max-width: 500px) {
-  .menu__logo {
-    width: 50%;
-  }
+  /* FOOTER */
 
-  .menu__search {
+  .footer__big__devices {
     display: none;
   }
 
-  .menu__input__lupa__mobile {
+  .footer__other__devices {
     display: initial;
-    display: flex;
   }
 
-  .menu__header {
-    width: min-content;
+  .footer__container__interior__img {
+    justify-content: space-around;
   }
 
-  .menu__button {
-    width: 30%;
-  }
-}
+  /* LOGIN */
 
-@media screen and (max-width: 360px) {
-  /* HERO */
-
-  .hero__title {
-    font-weight: 700;
-    font-size: 1.5rem;
+  .login__form {
+    width: 60%;
   }
 
-  .hero__subtitle {
-    font-weight: 600;
-    font-size: 0.875rem;
+  .login__form__input {
+    height: 2.5rem;
   }
 
-  /* PRODUCTOS */
+  @media screen and (max-width: 500px) {
+    .menu__logo {
+      width: 50%;
+    }
 
-  .products__interior {
-    padding: 0.5rem 0;
+    .menu__search {
+      display: none;
+    }
+
+    .menu__input__lupa__mobile {
+      display: initial;
+      display: flex;
+    }
+
+    .menu__header {
+      width: min-content;
+    }
+
+    .menu__button {
+      width: 30%;
+    }
   }
 
-  .products__ {
-    flex-wrap: wrap;
-    gap: 2%;
-    width: 90%;
-    margin: 0;
-  }
+  @media screen and (max-width: 360px) {
+    /* HERO */
 
-  .products__bar {
-    max-width: 48%;
-  }
+    .hero {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
-  .products__bar__card img {
-    max-width: 95%;
-    height: auto;
-  }
+    .hero__title {
+      font-weight: 700;
+      font-size: 2rem;
+    }
 
-  /* CONTACTO */
+    .hero__subtitle {
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
 
-  .contacto {
-    height: fit-content;
-    padding: 1.5rem;
-  }
+    /* PRODUCTOS */
 
-  .contacto__interior {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+    .products__interior {
+      padding: 0.5rem 0;
+    }
 
-  .contacto__interior {
-    height: fit-content;
-    gap: 2rem;
-  }
+    .products__ {
+      flex-wrap: wrap;
+      gap: 2%;
+      width: 90%;
+      margin: 0 auto;
+    }
 
-  .contacto__menu {
-    width: auto;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
+    .products__bar {
+      max-width: 48%;
+    }
 
-  .contacto__list {
-    gap: 1rem;
-  }
+    .products__bar__card img {
+      max-width: 95%;
+      height: auto;
+    }
 
-  .contacto__formulario {
-    width: 100%;
-  }
+    /* CONTACTO */
 
-  .contacto__container__medio {
-    padding: 0;
+    .contacto {
+      height: fit-content;
+      padding: 1.5rem;
+    }
+
+    .contacto__interior {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .contacto__interior {
+      height: fit-content;
+      gap: 2rem;
+    }
+
+    .contacto__menu {
+      width: auto;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contacto__list {
+      gap: 0.2rem;
+    }
+
+    .contacto__formulario {
+      width: 100%;
+    }
+
+    .contacto__container__medio {
+      padding: 0;
+    }
+
+    /* FOOTER */
+
+    .footer__container__interior__img {
+      height: 25%;
+    }
+
+    .footer__other__devices {
+      font-size: 0.8rem;
+    }
+
+    /* LOGIN */
+
+    .login__form {
+      width: 80%;
+    }
   }
 }
